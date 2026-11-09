@@ -304,10 +304,6 @@ function cbox(x1,y1,x2,y2,z1,z2,col,o){const m=cmesh(new THREE.BoxGeometry(M(x2-
       const hc=cmesh(new THREE.CylinderGeometry(.011,.011,.02,10),0xf2f0ea);hc.position.set(M(x),2.99,M(y));});
   });
 }
-[[3700,4400],[6200,6400],[6500,11400]].forEach(([x,y])=>{
-  const cord=cmesh(new THREE.CylinderGeometry(.006,.006,.5,6),0x222222);cord.position.set(M(x),2.75,M(y));
-  const sh=cmesh(new THREE.CylinderGeometry(.08,.23,.45,12,1,true),0xf0d9a6,{em:0x6a5528});sh.material.side=THREE.DoubleSide;sh.position.set(M(x),2.28,M(y));
-  const glow=cmesh(new THREE.CircleGeometry(.12,12),WARM,{basic:1});glow.rotation.x=Math.PI/2;glow.position.set(M(x),2.07,M(y));});
 cbox(900,4600,2500,10600,2450,2900,0xc6cacf,{me:.5,r:.35});
 cbox(1000,4700,2400,10500,2444,2450,WARM,{basic:1});
 [[1000,4700],[2400,4700],[1000,10500],[2400,10500]].forEach(([x,y])=>{const r=cmesh(new THREE.CylinderGeometry(.012,.012,.1,6),0x888b90);r.position.set(M(x),2.95,M(y));});
